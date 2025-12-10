@@ -1,171 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Your Portfolio</title>
-
-<style>
-    /* --- PAGE RESET --- */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-        cursor: none;
-    }
-
-    body {
-        height: 100vh;
-        overflow-x: hidden;
-        background: black;
-        color: white;
-    }
-
-    /* --- GLOWING BACKGROUND ANIMATION --- */
-    .background {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        background: radial-gradient(circle at center,
-            rgba(255, 0, 150, 0.3),
-            rgba(0, 150, 255, 0.1),
-            black 70%);
-        animation: pulse 6s infinite alternate;
-        z-index: -3;
-    }
-
-    @keyframes pulse {
-        0% { filter: blur(60px) brightness(0.8); }
-        100% { filter: blur(90px) brightness(1.1); }
-    }
-
-    /* --- SPOTLIGHT EFFECT --- */
-    .spotlight {
-        position: fixed;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        pointer-events: none;
-        background: radial-gradient(circle, rgba(255,255,255,0.8), transparent 70%);
-        mix-blend-mode: overlay;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-    }
-
-    /* --- MAIN CONTENT --- */
-    header {
-        text-align: center;
-        padding-top: 100px;
-    }
-
-    header h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-    }
-
-    header p {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        opacity: 0.8;
-    }
-
-    section {
-        width: 80%;
-        max-width: 900px;
-        margin: 100px auto;
-    }
-
-    section h2 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-    }
-
-    .project-card {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 20px;
-        border-radius: 15px;
-        margin-bottom: 20px;
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: 0.3s;
-    }
-
-    .project-card:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.1);
-    }
-
-    .contact-box {
-        background: rgba(255,255,255,0.05);
-        padding: 20px;
-        border-radius: 15px;
-        border: 1px solid rgba(255,255,255,0.1);
-        line-height: 1.7;
-    }
-
-    a {
-        color: #7ec8ff;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-</style>
+  <meta charset="UTF-8">
+  <title>Khushi • Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="background"></div>
-<div class="spotlight" id="spotlight"></div>
+  <canvas id="background"></canvas>
 
-<header>
-    <h1>Khushmeet Kaur</h1>
-    <p>Computer Science Student • Designer • Developer</p>
-</header>
+  <nav>
+    <div class="logo">Khushi</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<section id="projects">
-    <h2>Projects</h2>
+  <div class="center">
+    <h1>Hey there!</h1>
+    <h1>Welcome!</h1>
+    <h1>I'm Khushi ✨</h1>
+  </div>
 
-    <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A fully animated website with spotlight interactions and neon color effects.</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Python Data Tools</h3>
-        <p>Programs I built while learning Python (sorting, recursion, linked structures, etc.)</p>
-    </div>
-
-    <div class="project-card">
-        <h3>Business Analytics Dashboard</h3>
-        <p>Excel/Python dashboard analyzing trends in product performance.</p>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-
-    <div class="contact-box">
-        <p>Email: <a href="mailto:your-email@gmail.com">your-email@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourgithub">github.com/yourgithub</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin">linkedin.com/in/yourlinkedin</a></p>
-    </div>
-</section>
-
-<script>
-    /* --- Spotlight Follows Cursor --- */
-    const light = document.getElementById("spotlight");
-
-    document.addEventListener("mousemove", (e) => {
-        light.style.left = e.pageX + "px";
-        light.style.top = e.pageY + "px";
-    });
-</script>
-
+  <script src="fluidBG.js"></script>
 </body>
+
 </html>
