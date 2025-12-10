@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<title>Khushi Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khushi Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- canvas: first canvas will be used by fluid.js -->
+  <canvas></canvas>
 
-<!-- canvas must NOT have an id for the WebGL script -->
-<canvas></canvas>
-
-<nav>
+  <nav>
     <div class="logo">Khushi</div>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-</nav>
+  </nav>
 
-<div class="center">
+  <div class="center">
     <h1>Hey there!</h1>
-    <h1>Welcome!</h1>
-    <h1>I'm Khushi 😄</h1>
-</div>
+    <h2>I'm Khushi ✨</h2>
+    <p>Move your cursor & click to paint with light.</p>
+  </div>
 
-<!-- load the WebGL fluid simulator -->
-<script src="fluid.js"></script>
-
+  <!-- the interactive particle glow script -->
+  <script src="fluid.js"></script>
 </body>
 </html>
+
 
